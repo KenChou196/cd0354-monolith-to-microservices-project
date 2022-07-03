@@ -2,9 +2,9 @@
 # Use either `docker-compose` or individual `docker build` commands
 
 language: node_js
-# node js version 12.22.12
+# node js version 13
 node_js:
-  - 12
+  - 13
 
 services:
   - docker

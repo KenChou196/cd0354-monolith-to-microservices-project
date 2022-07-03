@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: apps/local
 kind: Deployment
 metadata:
   labels:
