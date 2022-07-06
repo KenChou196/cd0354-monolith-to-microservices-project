@@ -5,8 +5,7 @@
 export const environment = {
   production: false,
   appName: 'Udagram',
-  apiHost: 'http://localhost:8080/api/v0' // add end point ( expose Ip)
-  // apiHost: 'http://a38f75fd0939444068c90d26aed63410-664023834.us-east-1.elb.amazonaws.com/api/v0' // add end point ( expose Ip)
+  apiHost: 'http://a519dd63c98904273968795dcc0861cb-915157817.us-east-1.elb.amazonaws.com:8080/api/v0' // add end point ( expose Ip)
 };
 
 /*
@@ -33,9 +32,13 @@ export const environment = {
 /**
  *  Expose IP of front end and reverseproxy
  * 
- *  kubectl expose deployment udagram-frontend --type=LoadBalancer --name=service-expose-ip
- *  kubectl expose deployment udagram-reverseproxy --type=LoadBalancer --name=service-expose-ip-2
+ *  kubectl expose deployment udagram-frontend --type=LoadBalancer --name=expose-ip-frontend
+ *  kubectl expose deployment udagram-reverseproxy --type=LoadBalancer --name=expose-ip-reverseproxy
+ *  kubectl describe services expose-ip-reverseproxy
+ *  kubectl describe services expose-ip-frontend
  * 
+ *  docker build . -t kynkdev/udagram-frontend:v6
+    docker push kynkdev/udagram-frontend:v6
  * 
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
