@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   appName: 'Udagram',
-  apiHost: 'http://a519dd63c98904273968795dcc0861cb-915157817.us-east-1.elb.amazonaws.com:8080/api/v0' // add end point ( expose Ip)
+  apiHost: 'http://a1181be4308b0424b97fc9102dbc93dd-720323379.us-east-1.elb.amazonaws.com:8080/api/v0' // add end point ( expose Ip)
 };
 
 /*
@@ -40,5 +40,7 @@ export const environment = {
  *  docker build . -t kynkdev/udagram-frontend:v6
     docker push kynkdev/udagram-frontend:v6
  * 
+    auto scale 
+    kubectl autoscale deployment udagram-frontend --cpu-percent=50 --min=1 --max=10
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
